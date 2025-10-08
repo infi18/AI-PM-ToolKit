@@ -1,6 +1,7 @@
 import os
 from anthropic import Anthropic
 from dotenv import load_dotenv
+import datetime
 
 # Load your API key
 load_dotenv()
@@ -20,6 +21,18 @@ def call_claude(prompt, user_input):
     )
     
     return response.content[0].text
+
+def save_result(tool_name, result):
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"outputs/{tool_name}_{timestamp}.txt"
+    
+    # Create outputs folder if it doesn't exist
+    os.makedirs("outputs", exist_ok=True)
+    
+    with open(filename, "w") as f:
+        f.write(result)
+    
+    print(f"\n💾 Saved to: {filename}")
 
 # Tool 1: Extract Action Items
 def extract_action_items():
@@ -55,6 +68,7 @@ Action items:"""
     result = call_claude(prompt, notes)
     print(result)
     print("\n" + "=" * 50 + "\n")
+    save_result("action_items", result)
 
 # Tool 2: Generate User Stories
 def generate_user_stories():
@@ -77,6 +91,7 @@ User stories:"""
     result = call_claude(prompt, feature)
     print(result)
     print("\n" + "=" * 50 + "\n")
+    save_result("user_stories", result)
 
 # Tool 3: Stakeholder Updates
 def convert_technical_documentation():
@@ -105,6 +120,7 @@ Action items:"""
     result = call_claude(prompt, notes)
     print(result)
     print("\n" + "=" * 50 + "\n")
+    save_result("technical_documentation", result)
 
 # Tool 4: Assess Bug Severity
 def assess_bug_severity():
@@ -138,6 +154,7 @@ Assessment:"""
     result = call_claude(prompt, bug_report)
     print(result)
     print("\n" + "=" * 50 + "\n")
+    save_result("bug_severity", result)
 
 
 
@@ -173,3 +190,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
