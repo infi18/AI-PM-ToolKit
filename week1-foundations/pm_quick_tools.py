@@ -78,7 +78,35 @@ User stories:"""
     print(result)
     print("\n" + "=" * 50 + "\n")
 
-# Tool 3: Assess Bug Severity
+# Tool 3: Stakeholder Updates
+def convert_technical_documentation():
+    print("\n📝 COnvert Technical Documentation into User-Friendly Content")
+    print("=" * 50)
+    print("Paste your technical documentation below (press Enter twice when done):\n")
+    
+    # Multi-line input
+    lines = []
+    while True:
+        line = input()
+        if line == "":
+            break
+        lines.append(line)
+    
+    notes = "\n".join(lines)
+    
+    prompt = """Analyze these technical documentation and convert it into user-friendly content.
+
+Technical documentation:
+{input}
+
+Action items:"""
+    
+    print("\n🤔 Analyzing...\n")
+    result = call_claude(prompt, notes)
+    print(result)
+    print("\n" + "=" * 50 + "\n")
+
+# Tool 4: Assess Bug Severity
 def assess_bug_severity():
     print("\n🐛 BUG REPORT → SEVERITY ASSESSMENT")
     print("=" * 50)
@@ -111,6 +139,8 @@ Assessment:"""
     print(result)
     print("\n" + "=" * 50 + "\n")
 
+
+
 # Main Menu
 def main():
     print("\n" + "=" * 50)
@@ -121,22 +151,25 @@ def main():
         print("\nWhat would you like to do?")
         print("1. Extract action items from meeting notes")
         print("2. Generate user stories from feature idea")
-        print("3. Assess bug severity")
-        print("4. Exit")
+        print("3. Convert technical documentation into user-friendly content")
+        print("4. Assess bug severity")
+        print("5. Exit")
         
-        choice = input("\nEnter your choice (1-4): ")
+        choice = input("\nEnter your choice (1-5): ")
         
         if choice == "1":
             extract_action_items()
         elif choice == "2":
             generate_user_stories()
         elif choice == "3":
-            assess_bug_severity()
+            convert_technical_documentation()
         elif choice == "4":
+            assess_bug_severity()  
+        elif choice == "5":
             print("\n👋 Thanks for using PM Quick Tools!\n")
             break
         else:
-            print("\n❌ Invalid choice. Please enter 1-4.")
+            print("\n❌ Invalid choice. Please enter 1-5.")
 
 if __name__ == "__main__":
     main()
