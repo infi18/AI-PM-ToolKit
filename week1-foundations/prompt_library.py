@@ -332,7 +332,27 @@ Create step-by-step flow with:
 - Success/failure states
 - Edge cases
 
-User Flow:"""
+User Flow:""",
+
+    # === Documentation ===
+    
+    "documentation_generator": """Generate documentation for this feature:
+
+User Problem: {problem}
+Constraints: {constraints}
+Goals: {goals}
+
+Generate documentation with:
+- Each screen/step
+- User actions
+- System responses
+- Decision points
+- Success/failure states
+- Edge cases
+
+For each: brief description + pros/cons
+
+Documentation:""",
 }
 
 # ============================================
