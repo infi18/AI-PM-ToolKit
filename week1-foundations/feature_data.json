@@ -1,0 +1,11 @@
+{
+  "feature": "Dark Mode",
+  "priority": "High",
+  "effort": "Medium",
+  "team": "Frontend",
+  "tasks": [
+    "Design mockups",
+    "Implement toggle",
+    "Test on devices"
+  ]
+}
