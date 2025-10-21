@@ -324,4 +324,10 @@ if __name__ == "__main__":
         input_file = sys.argv[1]
     else:
         input_file = INPUT_FILE
+
+    # Run the analysis
+    feedback_items, summary = analyze_feedback(input_file)
+    if feedback_items:
+        display_statistics(feedback_items)
+
     print("\n🎉 Done!\n")
