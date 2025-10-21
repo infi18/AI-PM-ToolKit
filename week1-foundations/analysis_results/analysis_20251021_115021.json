@@ -1,0 +1,206 @@
+[
+  {
+    "ID": "001",
+    "User": "alice@company.com",
+    "Feedback": "The new dashboard is amazing! Love the clean design.",
+    "Date": "2024-10-15",
+    "Source": "In-app",
+    "analysis": {
+      "category": "Praise",
+      "sentiment": "Positive",
+      "priority": "Low",
+      "themes": [
+        "dashboard",
+        "design"
+      ],
+      "summary": "User expresses satisfaction with the new dashboard's clean design."
+    }
+  },
+  {
+    "ID": "002",
+    "User": "bob@startup.io",
+    "Feedback": "App crashes every time I try to export data. Super frustrating.",
+    "Date": "2024-10-15",
+    "Source": "Support",
+    "analysis": {
+      "category": "Bug",
+      "sentiment": "Negative",
+      "priority": "High",
+      "themes": [
+        "crash",
+        "data export"
+      ],
+      "summary": "User reports app crashes consistently when attempting to export data, causing frustration."
+    }
+  },
+  {
+    "ID": "003",
+    "User": "carol@corp.com",
+    "Feedback": "Please add dark mode. My eyes hurt using this at night.",
+    "Date": "2024-10-16",
+    "Source": "In-app",
+    "analysis": {
+      "category": "Feature Request",
+      "sentiment": "Negative",
+      "priority": "Medium",
+      "themes": [
+        "dark mode",
+        "user experience"
+      ],
+      "summary": "User requests dark mode feature to reduce eye strain during night usage."
+    }
+  },
+  {
+    "ID": "004",
+    "User": "dave@biz.net",
+    "Feedback": "Login is way too slow. Takes 10+ seconds sometimes.",
+    "Date": "2024-10-16",
+    "Source": "Support",
+    "analysis": {
+      "category": "Complaint",
+      "sentiment": "Negative",
+      "priority": "High",
+      "themes": [
+        "performance",
+        "login"
+      ],
+      "summary": "User experiencing slow login times of 10+ seconds."
+    }
+  },
+  {
+    "ID": "005",
+    "User": "eve@tech.co",
+    "Feedback": "Can you add bulk edit functionality? I have to edit items one by one.",
+    "Date": "2024-10-17",
+    "Source": "In-app",
+    "analysis": {
+      "category": "Feature Request",
+      "sentiment": "Neutral",
+      "priority": "Medium",
+      "themes": [
+        "bulk operations",
+        "user efficiency"
+      ],
+      "summary": "User requests bulk edit functionality to avoid having to edit items individually."
+    }
+  },
+  {
+    "ID": "006",
+    "User": "frank@demo.com",
+    "Feedback": "The mobile app is perfect! Works great on my iPhone.",
+    "Date": "2024-10-17",
+    "Source": "App Store",
+    "analysis": {
+      "category": "Praise",
+      "sentiment": "Positive",
+      "priority": "Low",
+      "themes": [
+        "mobile app",
+        "iOS compatibility"
+      ],
+      "summary": "User expresses complete satisfaction with the mobile app's performance on iPhone."
+    }
+  },
+  {
+    "ID": "007",
+    "User": "grace@example.org",
+    "Feedback": "Reports are broken - showing wrong data for last month.",
+    "Date": "2024-10-18",
+    "Source": "Support",
+    "analysis": {
+      "category": "Bug",
+      "sentiment": "Negative",
+      "priority": "High",
+      "themes": [
+        "reports",
+        "data accuracy"
+      ],
+      "summary": "User reports that reports are displaying incorrect data for the previous month."
+    }
+  },
+  {
+    "ID": "008",
+    "User": "henry@sample.com",
+    "Feedback": "Would love to see integration with Slack for notifications.",
+    "Date": "2024-10-18",
+    "Source": "In-app",
+    "analysis": {
+      "category": "Feature Request",
+      "sentiment": "Positive",
+      "priority": "Medium",
+      "themes": [
+        "integration",
+        "notifications"
+      ],
+      "summary": "User requests Slack integration functionality for receiving notifications."
+    }
+  },
+  {
+    "ID": "009",
+    "User": "iris@test.net",
+    "Feedback": "Your customer support team is incredible. They fixed my issue in 10 minutes!",
+    "Date": "2024-10-19",
+    "Source": "Email",
+    "analysis": {
+      "category": "Praise",
+      "sentiment": "Positive",
+      "priority": "Low",
+      "themes": [
+        "customer support",
+        "issue resolution"
+      ],
+      "summary": "Customer highly satisfied with support team's quick resolution of their issue."
+    }
+  },
+  {
+    "ID": "010",
+    "User": "jack@user.io",
+    "Feedback": "The search function doesn't work. I type something and get no results.",
+    "Date": "2024-10-19",
+    "Source": "Support",
+    "analysis": {
+      "category": "Bug",
+      "sentiment": "Negative",
+      "priority": "High",
+      "themes": [
+        "search functionality",
+        "user interface"
+      ],
+      "summary": "User reports that the search function is not returning any results when queries are entered."
+    }
+  },
+  {
+    "ID": "011",
+    "User": "kate@client.com",
+    "Feedback": "Price increase is too steep. Might have to switch to a competitor.",
+    "Date": "2024-10-20",
+    "Source": "Email",
+    "analysis": {
+      "category": "Complaint",
+      "sentiment": "Negative",
+      "priority": "High",
+      "themes": [
+        "pricing",
+        "customer retention"
+      ],
+      "summary": "Customer is unhappy with a significant price increase and considering switching to competitors."
+    }
+  },
+  {
+    "ID": "012",
+    "User": "leo@member.org",
+    "Feedback": "Love the new features you've been shipping. Keep it up!",
+    "Date": "2024-10-20",
+    "Source": "In-app",
+    "analysis": {
+      "category": "Praise",
+      "sentiment": "Positive",
+      "priority": "Low",
+      "themes": [
+        "product development",
+        "user satisfaction"
+      ],
+      "summary": "User expresses appreciation for recent feature releases and encourages continued development."
+    }
+  }
+]

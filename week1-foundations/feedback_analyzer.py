@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 from anthropic import Anthropic
 from dotenv import load_dotenv
-
+from tqdm import tqdm
 load_dotenv()
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
@@ -239,19 +239,12 @@ def analyze_feedback(input_file):
         return
     
     # Step 2: Analyze each item
-    print(f"\nStep 2: Analyzing {len(feedback_items)} items...")
-    print("(This will take ~30 seconds)\n")
-    
-    for i, item in enumerate(feedback_items, 1):
+    print(f"\nStep 2: Analyzing {len(feedback_items)} items...\n")
+    for item in tqdm(feedback_items, desc="Analyzing feedback"):
         feedback_text = item.get('Feedback', '')
-        
-        print(f"  [{i}/{len(feedback_items)}] Analyzing: {feedback_text[:50]}...")
-        
         analysis = categorize_feedback(feedback_text)
         item['analysis'] = analysis
-        
-        if analysis:
-            print(f"      → {analysis['category']} | {analysis['sentiment']} | Priority: {analysis['priority']}")
+ 
     
     # Step 3: Generate summary
     print("\nStep 3: Generating executive summary...")
