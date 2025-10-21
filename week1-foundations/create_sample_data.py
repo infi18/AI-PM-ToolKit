@@ -1,0 +1,24 @@
+import csv
+
+# Create realistic sample feedback
+feedback_data = [
+    ["ID", "User", "Feedback", "Date", "Source"],
+    ["001", "alice@company.com", "The new dashboard is amazing! Love the clean design.", "2024-10-15", "In-app"],
+    ["002", "bob@startup.io", "App crashes every time I try to export data. Super frustrating.", "2024-10-15", "Support"],
+    ["003", "carol@corp.com", "Please add dark mode. My eyes hurt using this at night.", "2024-10-16", "In-app"],
+    ["004", "dave@biz.net", "Login is way too slow. Takes 10+ seconds sometimes.", "2024-10-16", "Support"],
+    ["005", "eve@tech.co", "Can you add bulk edit functionality? I have to edit items one by one.", "2024-10-17", "In-app"],
+    ["006", "frank@demo.com", "The mobile app is perfect! Works great on my iPhone.", "2024-10-17", "App Store"],
+    ["007", "grace@example.org", "Reports are broken - showing wrong data for last month.", "2024-10-18", "Support"],
+    ["008", "henry@sample.com", "Would love to see integration with Slack for notifications.", "2024-10-18", "In-app"],
+    ["009", "iris@test.net", "Your customer support team is incredible. They fixed my issue in 10 minutes!", "2024-10-19", "Email"],
+    ["010", "jack@user.io", "The search function doesn't work. I type something and get no results.", "2024-10-19", "Support"],
+    ["011", "kate@client.com", "Price increase is too steep. Might have to switch to a competitor.", "2024-10-20", "Email"],
+    ["012", "leo@member.org", "Love the new features you've been shipping. Keep it up!", "2024-10-20", "In-app"],
+]
+
+with open("user_feedback.csv", "w", newline='') as f:
+    writer = csv.writer(f)
+    writer.writerows(feedback_data)
+
+print("✅ Created user_feedback.csv with 12 feedback items")
