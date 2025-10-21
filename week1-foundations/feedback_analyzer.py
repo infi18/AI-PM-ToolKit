@@ -5,6 +5,8 @@ from datetime import datetime
 from anthropic import Anthropic
 from dotenv import load_dotenv
 from tqdm import tqdm
+import sys
+
 load_dotenv()
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
@@ -317,11 +319,9 @@ def display_statistics(feedback_items):
 # ============================================
 
 if __name__ == "__main__":
-    # Run the analysis
-    feedback_items, summary = analyze_feedback(INPUT_FILE)
-    
-    # Show statistics
-    if feedback_items:
-        display_statistics(feedback_items)
-    
+    # Check for command line argument
+    if len(sys.argv) > 1:
+        input_file = sys.argv[1]
+    else:
+        input_file = INPUT_FILE
     print("\n🎉 Done!\n")
