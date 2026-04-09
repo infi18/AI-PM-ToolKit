@@ -1,5 +1,4 @@
-
-🤖 AI-PM-ToolKit
+AI-PM-ToolKit
 A collection of AI-powered tools and experiments built by a Product Manager learning to build with AI — not just use it.
 
 Python Claude API License
@@ -26,8 +25,8 @@ Self-critique loop for user story refinement
 cd foundations
 pip install -r requirements.txt
 python feedback_analyzer.py
-🌱 credit-health-coach/ (coming soon)
-AI-Powered Behavioral Credit Coaching Tool
+🌱 ai-pm-sidekick/ (coming soon)
+AI-Powered Behavioral PM Assitant Tool
 
 A full product built from scratch — market research, personas, behavioral journey map, wireframes, and a React + Claude API frontend.
 
