@@ -49,12 +49,10 @@ cd AI-PM-ToolKit
 pip install -r requirements.txt
 
 # Each project has its own requirements.txt — see individual folders
-About Me
-Senior PM with a software development background and 5+ years in consumer credit products. Currently completing a Behavioral Design for Finance certification (Irrational Labs).
 
 This repo is where I build things I wish existed — at the intersection of product thinking, behavioral science, and AI-native development.
 
-Currently building: Credit Health Coach
+Currently building: AI PM Assistant
 
 📎 LinkedIn · 📧 siddhi.naik18@gmail.com
 
